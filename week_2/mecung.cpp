@@ -32,10 +32,25 @@ int solve()
             }
         }
     }
-    return -1;
-    void input(){
+    return -1; // Không tìm thấy đường
+}
+    void input()
+    {
         cin >> n >> m >> r >> c;
         for (int i = 0; i < m; i++)
-        for (j = 0; j < n; j++)
-            }
+            for (int j = 0; j < n; j++)
+                cin >> a[i][j];
+    }
+
+int main()
+{
+    input();
+    int result = solve();
+    if (result == -1)
+        cout << "Khong tim thay duong";
+    else
+    {
+        cout << "So buoc nho nhat de di toi dich: " << result << endl;
+    }
+    return 0;
 }
