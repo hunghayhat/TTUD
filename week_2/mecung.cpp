@@ -7,8 +7,9 @@ int d[MAXN][MAXN];
 int visited[MAXN][MAXN];
 int m, n, r, c;
 queue<pair<int, int>> q;
-int dx[] = {1, -1, 0, 0};
-int dy[] = {0, 0, 1, -1};
+// Di chuyển lên, xuống, trái, phải
+int dx[] = {1, -1, 0, 0}; // Sang phải - trái
+int dy[] = {0, 0, 1, -1}; // Lên trên - xuống dưới
 int solve()
 {
     q.push(make_pair(r, c));
@@ -36,7 +37,7 @@ int solve()
 }
     void input()
     {
-        cin >> n >> m >> r >> c;
+        cin >> m >> n >> r >> c;
         for (int i = 0; i < m; i++)
             for (int j = 0; j < n; j++)
                 cin >> a[i][j];
@@ -50,7 +51,7 @@ int main()
         cout << "Khong tim thay duong";
     else
     {
-        cout << "So buoc nho nhat de di toi dich: " << result << endl;
+        cout << result << endl;
     }
     return 0;
 }
