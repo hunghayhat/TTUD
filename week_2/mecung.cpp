@@ -10,6 +10,23 @@ queue<pair<int, int>> q;
 // Di chuyển lên, xuống, trái, phải
 int dx[] = {1, -1, 0, 0}; // Sang phải - trái
 int dy[] = {0, 0, 1, -1}; // Lên trên - xuống dưới
+
+int solve();
+void input();
+
+int main()
+{
+    input();
+    int result = solve();
+    if (result == -1)
+        cout << "Khong tim thay duong";
+    else
+    {
+        cout << result << endl;
+    }
+    return 0;
+}
+
 int solve()
 {
     q.push(make_pair(r, c));
@@ -35,23 +52,10 @@ int solve()
     }
     return -1; // Không tìm thấy đường
 }
-    void input()
-    {
-        cin >> m >> n >> r >> c;
-        for (int i = 0; i < m; i++)
-            for (int j = 0; j < n; j++)
-                cin >> a[i][j];
-    }
-
-int main()
+void input()
 {
-    input();
-    int result = solve();
-    if (result == -1)
-        cout << "Khong tim thay duong";
-    else
-    {
-        cout << result << endl;
-    }
-    return 0;
+    cin >> m >> n >> r >> c;
+    for (int i = 0; i < m; i++)
+        for (int j = 0; j < n; j++)
+            cin >> a[i][j];
 }
